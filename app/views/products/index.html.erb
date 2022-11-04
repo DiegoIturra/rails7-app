@@ -1,0 +1,9 @@
+<h1>Productos</h1>
+<!--todo lo que va en %=% renderiza valores-->
+<h3>Existen <%= @products.count %> en la base de datos</h3>
+
+<% @products.each do |product| %>
+  <%= link_to product_path(product.id) do %>
+    <h2> <%= product.title%> </h2>
+  <%end%>
+<%end%>
